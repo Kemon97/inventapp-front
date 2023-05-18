@@ -1,2 +1,7 @@
-<p>product works!</p>
-<p>{{ obtenerInfo() }}</p>
+<h2> Registro de Productos </h2>
+
+<div>
+  <input type="text" [[(ngModel)]="binding"]="newProduct.nombre" placeholder="Arroz">
+  <input type="text" [ngClass]="newProduct.marca" placeholder="Roa">
+  <button (click)="productRegister()">Registrar</button>
+</div>
