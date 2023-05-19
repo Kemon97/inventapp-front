@@ -5,3 +5,19 @@
   <input type="text" [(ngModel)]="newProduct.marca" placeholder="Roa">
   <button (click)="productRegister()">Registrar</button>
 </div>
+
+<h2>Listado de productos:</h2>
+<ul>
+  <li *ngFor="let producto of products">
+    <span> {{ producto.nombre}} - ${{producto.marca}} </span>
+    <button (click)="selectProduct(producto)">Editar</button>
+    <button (click)="clearProduct(producto)">Eliminar</button>
+  </li>
+</ul>
+
+<div *ngIf="productSelected">
+  <h3>Modificar producto:</h3>
+  <input type="text" [(ngModel)]="productSelected.nombre" placeholder="Nombre del producto">
+  <input type="text" [(ngModel)]="productSelected.marca" placeholder="Marca del producto">
+  <button (click)="modifyProduct()">Guardar cambios</button>
+</div>
