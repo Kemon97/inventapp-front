@@ -1,14 +1,14 @@
 
 import { Component } from '@angular/core';
+//import { ProductS } from './product.component.spec';
 
 interface Product{
   id: number;
   nombre: string;
   marca: string;
 }
-
+/*
 @Component({
-  selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
@@ -42,5 +42,5 @@ export class ProductComponent {
       this.products.splice(index, 1);
     }
   }
-}
+}*/
 
