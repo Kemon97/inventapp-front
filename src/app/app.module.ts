@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { InventaryComponent } from './inventary/inventary.component';
-//import { ProductComponent } from './product/product.component';
+import { ProductComponent } from './product/product.component';
 import { RouterModule } from "@angular/router";
 @NgModule({
   declarations: [

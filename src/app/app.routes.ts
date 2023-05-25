@@ -12,11 +12,11 @@ const app_routes:Routes = [
 export const app_routing = RouterModule.forRoot(app_routes); */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-//import { ProductComponent } from '../app/product/product.component';
+import { ProductComponent } from '../app/product/product.component';
 import { InventaryComponent } from '../app/inventary/inventary.component';
 
 const app_routes: Routes = [
- // { path: 'product', component: ProductComponent },
+  { path: 'product', component: ProductComponent },
   { path: 'inventary', component: InventaryComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
