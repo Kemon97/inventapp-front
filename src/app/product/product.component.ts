@@ -7,7 +7,7 @@ interface Product{
   nombre: string;
   marca: string;
 }
-/*
+
 @Component({
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
@@ -42,5 +42,5 @@ export class ProductComponent {
       this.products.splice(index, 1);
     }
   }
-}*/
+}
 
