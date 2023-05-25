@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-//import { ProductS } from './product.component.spec';
+import { HttpClient } from '@angular/common/http';
 
 interface Product{
   id: number;
@@ -9,11 +9,14 @@ interface Product{
 }
 
 @Component({
+  selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
 
 export class ProductComponent {
+  constructor(private http: HttpClient) { }
+  
   products: Product[] = [];
   newProduct: Product = {id: 0, nombre: '', marca: ''}
   productSelected: Product | null = null;

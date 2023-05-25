@@ -1,5 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-/* 
+import { ComponentFixture, TestBed } from '@angular/core/testing'; 
 import { ProductComponent } from './product.component';
 
 describe('ProductComponent', () => {
@@ -19,4 +18,3 @@ describe('ProductComponent', () => {
     expect(component).toBeTruthy();
   });
 });
- */
