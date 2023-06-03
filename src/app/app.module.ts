@@ -6,18 +6,27 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { InventaryComponent } from './inventary/inventary.component';
+import { InventoryComponent } from './inventory/inventory.component';
 import { ProductComponent } from './product/product.component';
-import { RouterModule } from "@angular/router";
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegisterComponent,
+    LoginComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

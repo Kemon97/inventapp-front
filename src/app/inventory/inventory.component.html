@@ -1,0 +1,48 @@
+<script>
+  document.getElementById('inventoryForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario por defecto
+
+    // Obtén los valores de los campos del formulario
+    var cliente = document.getElementById('cliente').value;
+    var producto = document.getElementById('producto').value;
+
+    // Crea un objeto con los datos del formulario
+    var data = {
+      cliente: cliente,
+      producto: producto,
+      state:1,
+    };
+
+    // Realiza la solicitud POST utilizando AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/v1/inventory', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 201) {
+        alert('Registro exitoso'); // Mostrar mensaje de éxito
+        // Limpia los campos del formulario
+        document.getElementById('cliente').value = '';
+        document.getElementById('producto').value = '';
+      }
+    };
+    xhr.send(JSON.stringify(data));
+  });
+</script>
+
+
+<div class="container">
+  <h2>Registro de Inventario</h2>
+  <form id="inventoryForm">
+    <div class="form-group">
+      <label for="cliente">Cliente:</label>
+      <input type="text" class="form-control" id="cliente" placeholder="Ingrese el nombre del cliente">
+    </div>
+    <div class="form-group">
+      <label for="producto">Producto:</label>
+      <input type="text" class="form-control" id="producto" placeholder="Ingrese el nombre del producto" >
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="postData()">Registrar</button>
+  </form>
+</div>
+
+

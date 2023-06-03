@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'inventapp-front';
+
+  openNewUserWindow() {
+    window.open('/register', '_blank');
+  }
+}
+export class LoginComponent {
+  // Código del componente
+
+  
 }
