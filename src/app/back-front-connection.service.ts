@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BackFrontConnectionService {
 
-  private backendUrl=""
+  private backendUrl="api/v1/client"
 
   constructor() { }
 }
