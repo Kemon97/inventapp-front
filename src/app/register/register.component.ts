@@ -17,10 +17,10 @@ export class RegisterComponent implements OnInit{
   constructor(private registerService:RegisterService,private router: Router,private toastr:ToastrService){}
 
   ngOnInit(): void {
-      
+
   }
-  
-  
+
+
   create():void{
     console.log(this.registerUser);
     this.registerService.create(this.registerUser).subscribe(
@@ -35,5 +35,7 @@ export class RegisterComponent implements OnInit{
       }
     );
   }
+
+    pdfUrl: string = '/Docs/Política de Privacidad inventapp.pdf';
 
 }
