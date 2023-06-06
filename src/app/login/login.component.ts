@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   constructor(private login:LoginService,private router: Router){}
 
   ngOnInit(): void {
-      
+
   }
 
   consult(): void{
@@ -26,5 +26,7 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
+  pdfUrl: string = '/Docs/Política de Privacidad inventapp.pdf'
 
 }
