@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'inventapp-front';
 
   openNewUserWindow() {
@@ -16,4 +17,9 @@ export class LoginComponent {
   // Código del componente
 
   
+}
+
+export class DeleteAccount {
+
+  private url:string="http://localhost:8080/api/v1/client/{id}";
 }

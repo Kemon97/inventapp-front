@@ -1,7 +1,10 @@
 import { Component,OnInit } from '@angular/core';
 import { Login } from './login';
 import { LoginService } from './login.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { count } from 'rxjs';
+
 
 @Component({
   selector: 'app-login',
@@ -20,10 +23,24 @@ export class LoginComponent implements OnInit {
 
   consult(): void{
     this.login.get(this.datos.email,this.datos.password).subscribe(
-      (response)=>{
+      /* (response)=>{
+        let variable = response.json();
+        console.log(variable);
+      } */
+       (response)=>{
+         
         console.log(response);
-        this.router.navigate(['/main'])
-      }
+        if(response){
+          
+          this.router.navigate(['/main']);
+        }else{
+            Swal.fire('Error',
+          'Datos incorrecto por favor verifica datos',
+          'error');
+          
+        }
+
+      } 
     )
   }
 

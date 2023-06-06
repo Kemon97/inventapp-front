@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RegisterUser } from './register-user';
 import { RegisterService } from './register.service';
 import { Router } from '@angular/router';
-//import { ToastrService } from 'ngx-toastr';
+import { ToastrService } from 'ngx-toastr';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -13,8 +14,8 @@ export class RegisterComponent implements OnInit{
 
   registerUser:RegisterUser = new RegisterUser();
 
-  constructor(private registerService:RegisterService,private router: Router){}
-  //,private toastr:ToastrService
+  constructor(private registerService:RegisterService,private router: Router,private toastr:ToastrService){}
+
   ngOnInit(): void {
       
   }
@@ -24,7 +25,9 @@ export class RegisterComponent implements OnInit{
     console.log(this.registerUser);
     this.registerService.create(this.registerUser).subscribe(
       () => {
-        //this.toastr.success('¡Guardado exitosamente!', 'Confirmación');
+        Swal.fire('Bien Hecho',
+        'Se registro usuario correctamente',
+        'success');
         this.router.navigate(['/login']);
       },
       (error) =>{

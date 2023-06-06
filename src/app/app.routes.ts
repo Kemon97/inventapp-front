@@ -17,6 +17,8 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { ClientComponent } from './client/client.component';
+
 
 const app_routes: Routes = [
   { path: '', redirectTo:'/login',pathMatch:'full'},
@@ -24,7 +26,9 @@ const app_routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'inventary', component: InventoryComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'main', component:MainComponent }
+  { path: 'main', component:MainComponent },
+  { path: 'client',component:ClientComponent}
+  
 
  /*  { path: '**', pathMatch: 'full', redirectTo: 'home' }*/
 ]; 

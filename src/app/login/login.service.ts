@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Login } from './login';
+import { CookieService } from "ngx-cookie-service";
 
 @Injectable({
   providedIn: 'root'
@@ -15,4 +16,6 @@ export class LoginService {
   get(email:String,password:String):Observable<Login>{
     return this.http.get<Login>(this.url+'/'+email+'/'+password);
   }
+
+  
 }
